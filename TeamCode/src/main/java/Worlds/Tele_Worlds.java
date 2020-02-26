@@ -25,6 +25,7 @@ public class Tele_Worlds extends OpMode {
     // Variables used in controls below
     private boolean rServoWasPressed = false;
     private boolean lServoWasPressed = false;
+    boolean sfagarf = true;
 
     public void init() {
         // Initializes hardware map for the phones
