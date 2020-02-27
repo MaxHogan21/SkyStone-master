@@ -2,6 +2,7 @@ package Worlds;
 
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 
@@ -44,10 +45,11 @@ public class SKYHardware {
         grabRight = sshw.servo.get("grabRight");
         grabLeft = sshw.servo.get("grabLeft");
         grabHolder = sshw.servo.get("grabHolder");
-        //smackServo = sshw.servo.get("smackServo");
         grabLeftF = sshw.servo.get("grabLeftF");
         grabRightF = sshw.servo.get("grabRightF");
         parkServo = sshw.crservo.get("parkServo");
+        rightF.setDirection(DcMotor.Direction.REVERSE);
+        leftF.setDirection(DcMotor.Direction.REVERSE);
         armB2.setDirection(DcMotor.Direction.REVERSE);
         armV.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
