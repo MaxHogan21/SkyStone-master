@@ -5,6 +5,7 @@ import com.disnodeteam.dogecv.detectors.skystone.SkystoneDetector;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.openftc.easyopencv.OpenCvCamera;
 import org.openftc.easyopencv.OpenCvCameraRotation;
 import org.openftc.easyopencv.OpenCvInternalCamera;
@@ -22,6 +23,7 @@ import java.util.Locale;
 public class OpenCVTest extends LinearOpMode {
     private OpenCvCamera phoneCam;
     private SkystoneDetector skyStoneDetector;
+    WebcamName webcamName = null;
 
     @Override
     public void runOpMode() {

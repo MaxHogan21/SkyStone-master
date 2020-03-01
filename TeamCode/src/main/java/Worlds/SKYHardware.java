@@ -60,10 +60,4 @@ public class SKYHardware {
             Thread.currentThread().interrupt();
         }
     }
-
-    public void move(double power, int time){
-        leftF.setPower(power);
-        sleep(time);
-
-    }
 }
