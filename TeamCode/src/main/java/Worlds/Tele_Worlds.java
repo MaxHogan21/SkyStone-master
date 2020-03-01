@@ -3,9 +3,6 @@ package Worlds;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-
-
-
 @TeleOp
 //@Disabled
 public class Tele_Worlds extends OpMode {
@@ -14,7 +11,7 @@ public class Tele_Worlds extends OpMode {
     private SKYHardware SKY = new SKYHardware();
 
     // This is the same sleep method that is used in autonomous programs. We use it for delays in
-    // the loop to prevent the program from thinking a button was pressed multiple times
+    // the main loop to prevent the program from thinking a button was pressed multiple times
     public void sleep(long milliseconds) {
         try {
             Thread.sleep(milliseconds);
@@ -25,8 +22,6 @@ public class Tele_Worlds extends OpMode {
     // Variables used in controls below
     private boolean rServoWasPressed = false;
     private boolean lServoWasPressed = false;
-
-
 
     public void init() {
         // Initializes hardware map for the phones
@@ -124,7 +119,7 @@ public class Tele_Worlds extends OpMode {
         // Accessory driver's controls
 
         // Moves our main building arm
-        SKY.armV.setPower(-gamepad2.left_stick_y);
+        SKY.armV.setPower(gamepad2.left_stick_y);
         // Moves our back arm that we use in autonomous in case there was an issue
         SKY.armB1.setPower(gamepad2.right_stick_x);
         SKY.armB2.setPower(gamepad2.right_stick_y);

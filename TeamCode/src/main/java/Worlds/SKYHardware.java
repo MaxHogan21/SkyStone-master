@@ -50,6 +50,20 @@ public class SKYHardware {
         rightF.setDirection(DcMotor.Direction.REVERSE);
         leftF.setDirection(DcMotor.Direction.REVERSE);
         armB2.setDirection(DcMotor.Direction.REVERSE);
+        armV.setDirection(DcMotor.Direction.REVERSE);
         armV.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+    }
+    public void sleep(long milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    public void move(double power, int time){
+        leftF.setPower(power);
+        sleep(time);
+
     }
 }
